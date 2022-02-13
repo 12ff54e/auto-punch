@@ -1,0 +1,3 @@
+[submodule "src-tauri/simple-rsa"]
+	path = src-tauri/simple-rsa
+	url = https://github.com/12ff54e/simple-rsa
