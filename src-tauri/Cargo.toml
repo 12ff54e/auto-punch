@@ -1,0 +1,26 @@
+[package]
+authors = ["Q. Zhong"]
+build = "src/build.rs"
+default-run = "auto-punch"
+description = "An auto punch App"
+edition = "2018"
+license = "MIT"
+name = "auto-punch"
+repository = ""
+version = "0.1.0"
+
+[build-dependencies]
+tauri-build = {version = "1.0.0-beta.4", features = []}
+
+[dependencies]
+futures = "0.3.21"
+reqwest = {version = "0.11", features = ["cookies", "gzip", "json"]}
+scraper = "0.12"
+serde = {version = "1.0", features = ["derive"]}
+serde_json = "1.0"
+simple-rsa = {path = "simple-rsa"}
+tauri = {version = "1.0.0-rc.0", features = ["system-tray"]}
+
+[features]
+custom-protocol = ["tauri/custom-protocol"]
+default = ["custom-protocol"]
